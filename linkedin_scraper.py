@@ -129,8 +129,11 @@ def run_agent(keyword="AI Engineer", location="India"):
 if __name__ == "__main__":
     from sheets_writer import write_jobs_to_sheet
 
-    keywords = ["AI Engineer", "ML Engineer", "Data Scientist"]
-    location = "India"
+    print("🤖 LinkedIn Job Scraper Agent")
+    print("="*50)
+    user_input = input("Enter job keywords (comma separated): ")
+    keywords = [k.strip() for k in user_input.split(",")]
+    location = input("Enter location : ")
 
     all_results = []
     for keyword in keywords:
